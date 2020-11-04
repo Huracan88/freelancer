@@ -8,17 +8,17 @@ class Project extends Model
 {
     public function client()
     {
-        return $this->belongsTo('Client');
+        return $this->belongsTo(Client::class);
     }
 
     public function budgets()
     {
-        return $this->hasMany('Budget');
+        return $this->hasMany(Budget::class);
     }
 
     public function receivables()
     {
-        return $this->hasMany('Receivable');
+        return $this->hasMany(Receivable::class);
     }
 
 }

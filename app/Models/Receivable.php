@@ -7,14 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class Receivable extends Model
 {
 
+    protected $dates = [
+        'date',
+    ];
+
     public function project()
     {
-        return $this->belongsTo('Project');
+        return $this->belongsTo(Project::class);
     }
 
     public function budget()
     {
-        return $this->belongsTo('Budget');
+        return $this->belongsTo(Budget::class);
     }
 
 }
