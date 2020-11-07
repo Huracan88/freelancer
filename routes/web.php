@@ -1,8 +1,10 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\LivewireController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,17 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+
+Route::prefix('livewire')
+    ->middleware(['auth:sanctum', 'verified'])
+    ->group(function(){
+
+        Route::get('/',[LivewireController::class, 'index']);
+    });
+
+
 
 
 Route::prefix('client')

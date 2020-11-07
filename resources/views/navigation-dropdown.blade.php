@@ -26,6 +26,10 @@
                     <x-jet-nav-link href="{{ route('projects') }}" :active="request()->routeIs('projects')">
                         {{ __('Projects') }}
                     </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ url('livewire') }}" :active="request()->is('livewire')">
+                        {{ __('Livewire') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 
