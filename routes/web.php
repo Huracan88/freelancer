@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\ExpenseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ProjectController;
@@ -67,4 +68,18 @@ Route::prefix('account')
         Route::get('delete/{receivable}',[\App\Http\Controllers\ReceivableController::class, 'doDelete']);
 
     });
+
+
+Route::prefix('expenses')
+    ->middleware(['auth:sanctum', 'verified'])
+    ->group(function(){
+
+        Route::get('/',[ExpenseController::class, 'index'])->name('expenses');
+        Route::get('/new-record',[ExpenseController::class, 'newRecordForm']);
+        Route::get('/edit-record/{expense}',[ExpenseController::class, 'editRecordForm']);
+//        Route::post('/insert',[ExpenseController::class, 'doInsert']);
+//        Route::post('/edit',[ExpenseController::class, 'doEdit']);
+        Route::get('/delete/{expense}',[ExpenseController::class, 'doDelete']);
+    });
+
 

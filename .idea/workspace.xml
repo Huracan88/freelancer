@@ -23,11 +23,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5060ccd-fa9e-46eb-a70d-ad9472cf1055" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LivewireController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/prototypes/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ExpenseController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Expense.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/Components/Icons/Check.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_06_215845_create_expenses_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/tables.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/icons/check.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/expenses/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/expenses/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/freelancer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/freelancer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/titles.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/titles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/icons/calculator.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/icons/calculator.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/icons/plus-circle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/icons/plus-circle.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/icons/trash.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/icons/trash.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,6 +177,9 @@
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ivFZFeV6LjrZUYLWFR3XZDuTq9" />
@@ -175,7 +191,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/livewire-tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/View/Components/Icons" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -183,11 +199,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\freelancer\app\View\Components\Icons" />
+      <recent name="D:\laragon\www\freelancer\resources\views\components\icons" />
+      <recent name="D:\laragon\www\freelancer\resources\views\expenses" />
+      <recent name="D:\laragon\www\freelancer\resources\views" />
       <recent name="D:\laragon\www\freelancer\resources\views\livewire-tests" />
-      <recent name="D:\laragon\www\freelancer\app\Http\Controllers" />
-      <recent name="C:\wamp64\www\freelancer\app\View\Components\Icons" />
-      <recent name="C:\wamp64\www\freelancer\resources\views\components\icons" />
-      <recent name="C:\wamp64\www\freelancer\resources\views\receivable" />
     </key>
   </component>
   <component name="RunManager">
@@ -218,6 +234,7 @@
       <workItem from="1604547744615" duration="668000" />
       <workItem from="1604628185907" duration="5826000" />
       <workItem from="1604688797879" duration="2306000" />
+      <workItem from="1604721345088" duration="19101000" />
     </task>
     <servers />
   </component>
@@ -249,9 +266,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1602818692963" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602995063818">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604796848482">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.0.1536.864@0.0.1536.824" timestamp="1604796848482" />
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602995063818" />
     <state x="637" y="307" key="Create Blade Component" timestamp="1603133475031">
       <screen x="0" y="0" width="1536" height="824" />
@@ -274,15 +292,28 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604548893813" />
-    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602839242470">
+    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604797916053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824/1920.0.1536.864@0.0.1536.824" timestamp="1604797916053" />
     <state x="374" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1602839242470" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604691144687">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604723631878">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1536.864@0.0.1536.824" timestamp="1604723631878" />
+    <state x="352" y="0" width="1198" height="649" key="dock-window-1" timestamp="1604722688697">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="352" y="0" width="1198" height="649" key="dock-window-1/0.0.1536.824/1920.0.1536.864@0.0.1536.824" timestamp="1604722688697" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1604813155303">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1536.864@0.0.1536.824" timestamp="1604813155303" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604815187999">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1360.768@0.0.1536.824" timestamp="1604691144687" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1536.864@0.0.1536.824" timestamp="1604630227199" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1536.864@0.0.1536.824" timestamp="1604815187999" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603002338397" />
   </component>
 </project>

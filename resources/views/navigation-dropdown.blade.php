@@ -27,6 +27,10 @@
                         {{ __('Projects') }}
                     </x-jet-nav-link>
 
+                    <x-jet-nav-link href="{{ route('expenses') }}" :active="request()->routeIs('expenses')">
+                        @lang('titles.expenses')
+                    </x-jet-nav-link>
+
                     <x-jet-nav-link href="{{ url('livewire') }}" :active="request()->is('livewire')">
                         {{ __('Livewire') }}
                     </x-jet-nav-link>
