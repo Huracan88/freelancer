@@ -14,4 +14,15 @@ class ClientController extends Controller
 
         return view('client.index')->with($view_data);
     }
+
+
+    public function new(){
+        return view('client.form',['client'=>null]);
+    }
+
+    public function edit(Client $client){
+        return view('client.form',['client'=>$client]);
+    }
+
+
 }

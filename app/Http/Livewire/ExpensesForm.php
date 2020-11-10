@@ -2,9 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Client;
 use App\Models\Expense;
-use Illuminate\Support\Collection;
 use Livewire\Component;
 
 class ExpensesForm extends Component

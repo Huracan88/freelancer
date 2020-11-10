@@ -31,7 +31,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::prefix('livewire')
     ->middleware(['auth:sanctum', 'verified'])
     ->group(function(){
-
         Route::get('/',[LivewireController::class, 'index']);
     });
 
@@ -43,6 +42,8 @@ Route::prefix('client')
     ->group(function(){
 
     Route::get('/',[ClientController::class, 'index'])->name('clients');
+    Route::get('/new',[ClientController::class, 'new']);
+    Route::get('/edit/{client}',[ClientController::class, 'edit']);
 });
 
 
@@ -77,8 +78,6 @@ Route::prefix('expenses')
         Route::get('/',[ExpenseController::class, 'index'])->name('expenses');
         Route::get('/new-record',[ExpenseController::class, 'newRecordForm']);
         Route::get('/edit-record/{expense}',[ExpenseController::class, 'editRecordForm']);
-//        Route::post('/insert',[ExpenseController::class, 'doInsert']);
-//        Route::post('/edit',[ExpenseController::class, 'doEdit']);
         Route::get('/delete/{expense}',[ExpenseController::class, 'doDelete']);
     });
 
