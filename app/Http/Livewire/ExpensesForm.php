@@ -7,6 +7,8 @@ use Livewire\Component;
 
 class ExpensesForm extends Component
 {
+    public $expense;
+    public $clients;
 
     public $client_id;
     public $date;
@@ -14,9 +16,6 @@ class ExpensesForm extends Component
     public $comments;
     public $status;
     public $amount;
-
-    public $expense;
-    public $clients;
 
     public $successMessage;
 
@@ -34,11 +33,22 @@ class ExpensesForm extends Component
     }
 
     public function mount($expense){
-        if($expense == null) {
+        if($this->expense == null) {
+            $this->expense = New Expense();
             $this->date = \Carbon\Carbon::today()->format('Y-m-d');
             $this->status = 'paid';
             $this->client_id = "";
         }
+
+        if($this->expense->exists){
+            $this->client_id = $expense->client_id ;
+            $this->date= $expense->date;
+            $this->description= $expense->description;
+            $this->comments= $expense->comments;
+            $this->status= $expense->status;
+            $this->amount= $expense->amount;
+        }
+
     }
 
 
@@ -54,7 +64,7 @@ class ExpensesForm extends Component
 
         if($this->client_id == "") $this->client_id = null;
 
-        $record = new Expense();
+        $record = $this->expense;
         $record->client_id = $this->client_id;
         $record->description = $this->description;
         $record->amount = $this->amount;
@@ -65,7 +75,7 @@ class ExpensesForm extends Component
         $record->save();
 
         $this->resetForm();
-        $this->successMessage = 'El registro de agregó a la base de datos';
+        $this->successMessage = $this->expense->exists ? 'Record edited' : 'Record added';
 
         return redirect('expenses');
     }

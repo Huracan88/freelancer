@@ -23,12 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5060ccd-fa9e-46eb-a70d-ad9472cf1055" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/client/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExpenseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExpenseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReceivableController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReceivableController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Client/ClientForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Client/ClientForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ExpensesForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ExpensesForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/client/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/expenses/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/expenses/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/client/client-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/client/client-form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/expenses-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/expenses-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/project/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/project/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/project/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/project/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,10 +187,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../suplencias" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -223,7 +232,10 @@
       <workItem from="1604628185907" duration="5826000" />
       <workItem from="1604688797879" duration="2306000" />
       <workItem from="1604721345088" duration="20070000" />
-      <workItem from="1604959129189" duration="4828000" />
+      <workItem from="1604959129189" duration="11228000" />
+      <workItem from="1605125797716" duration="4873000" />
+      <workItem from="1605327705616" duration="1506000" />
+      <workItem from="1605573181200" duration="910000" />
     </task>
     <servers />
   </component>
@@ -277,11 +289,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="643" y="336" key="Create Model/0.0.1536.824@0.0.1536.824" timestamp="1602826842250" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1604935953478">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2406" y="156" key="FileChooserDialogImpl" timestamp="1605030814110">
+      <screen x="1920" y="0" width="1360" height="768" />
     </state>
+    <state x="2406" y="156" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1360.768@1920.0.1360.768" timestamp="1605030814110" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1536.864@0.0.1536.824" timestamp="1604935953478" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604548893813" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1604971872648">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1536.864@0.0.1536.824" timestamp="1604971872648" />
     <state width="532" height="446" key="SwitcherDM" timestamp="1604960367640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -303,11 +320,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1536.864@0.0.1536.824" timestamp="1604813155303" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604961842129">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605154229595">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1360.768@0.0.1536.824" timestamp="1604691144687" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1536.864@0.0.1536.824" timestamp="1604961842129" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1536.864@0.0.1536.824" timestamp="1605154229595" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603002338397" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/project/form.blade.php</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

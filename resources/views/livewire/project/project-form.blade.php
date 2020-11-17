@@ -2,13 +2,14 @@
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            @if($client->exists)
-                Client: <span>{{ $client->name }}</span>
+            @if($project->exists)
+                Project: <span>{{$project->name}}</span>
             @else
-                New client
+                New project
             @endif
         </h2>
     </x-slot>
+
 
     <div class="py-3">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -37,12 +38,17 @@
 
 
                             <div class="-mx-3 md:flex mb-6">
+
                                 <div class="md:w-full px-3 mb-6 md:mb-0">
-                                    <label for="client.name" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Name</label>
-                                    <input type="text" id="client.name" name="client.name" wire:model="client.name"
-                                    class="@error('client.name') border-red-500 @enderror appearance-none block w-full bg-grey-lighter text-grey-darker border rounded py-3 px-4"
-                                    value="" />
-                                    @error('client.name')
+
+                                    <label for="project.client_id" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Client</label>
+                                    <select name="project.client_id" id="project.client_id" wire:model="project.client_id"
+                                            class="@error('project.client_id') border-red-500 @enderror appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4">
+                                        @foreach($clients as $cl_id => $cl_val)
+                                            <option value="{{ $cl_id }}">{{ $cl_val }}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('project.client_id')
                                     <p class="text-red-500 mt-1">{{ $message }}</p>
                                     @enderror
 
@@ -53,12 +59,12 @@
 
                             <div class="-mx-3 md:flex mb-6">
                                 <div class="md:w-full px-3">
-                                    <label for="client.contact" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">
-                                        Contact</label>
-                                    <input type="text" id="client.contact" name="client.contact" wire:model="client.contact"
-                                           class="@error('client.contact') border-red-500 @enderror appearance-none block w-full bg-grey-lighter text-grey-darker border rounded py-3 px-4"
+                                    <label for="project.name" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">
+                                        Project name</label>
+                                    <input type="text" id="project.name" name="project.name" wire:model="project.name"
+                                           class="@error('project.name') border-red-500 @enderror appearance-none block w-full bg-grey-lighter text-grey-darker border rounded py-3 px-4"
                                            value="" />
-                                    @error('client.contact')
+                                    @error('project.name')
                                     <p class="text-red-500 mt-1">{{ $message }}</p>
                                     @enderror
                                 </div>
@@ -67,21 +73,23 @@
 
                             <div class="-mx-3 md:flex mb-6">
                                 <div class="md:w-1/2 px-3 mb-6 md:mb-0">
-                                    <label for="client.email" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Email</label>
-                                    <input type="email" id="client.email" name="client.email" wire:model="client.email"
-                                           class="@error('client.email') border-red-500 @enderror appearance-none block w-full bg-grey-lighter text-grey-darker border rounded py-3 px-4"
+                                    <label for="project.date" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Date</label>
+                                    <input type="text" id="project.date" name="project.date" wire:model="project.date"
+                                           class="@error('project.date') border-red-500 @enderror appearance-none block w-full bg-grey-lighter text-grey-darker border rounded py-3 px-4"
                                            value="" />
-                                    @error('client.email')
+                                    @error('project.date')
                                     <p class="text-red-500 mt-1">{{ $message }}</p>
                                     @enderror
 
                                 </div>
                                 <div class="md:w-1/2 px-3">
-                                    <label for="client.phone_number" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Phone Number</label>
-                                    <input type="text" id="client.phone_number" name="client.phone_number" wire:model="client.phone_number"
-                                           class="@error('client.phone_number') border-red-500 @enderror appearance-none block w-full bg-grey-lighter text-grey-darker border rounded py-3 px-4"
-                                           value="" />
-                                    @error('client.phone_number')
+                                    <label for="project.is_active" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Active</label>
+                                    <select name="project.is_active" id="project.is_active" wire:model="project.is_active"
+                                            class="@error('project.is_active') border-red-500 @enderror appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4">
+                                        <option value="1" selected >Yes</option>
+                                        <option value="0" >No</option>
+                                    </select>
+                                    @error('project.is_active')
                                     <p class="text-red-500 mt-1">{{ $message }}</p>
                                     @enderror
                                 </div>
@@ -99,14 +107,14 @@
                                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                     </svg>
 
-                                    @if($client->exists)
-                                        Edit client
+                                    @if($project->exists)
+                                        Edit project
                                     @else
-                                        Add client
+                                        Add project
                                     @endif
                                 </button>
 
-                                <a href="{!! url('client') !!}" class="cursor-pointer bg-teal-400 hover:bg-teal-600 px-5 py-2 mx-2
+                                <a href="{!! url('project') !!}" class="cursor-pointer bg-teal-400 hover:bg-teal-600 px-5 py-2 mx-2
                                         inline-block text-white rounded disabled:opacity-50"> Back </a>
                             </div>
 
@@ -128,7 +136,5 @@
             </div>
         </div>
     </div>
-
-
 
 </div>

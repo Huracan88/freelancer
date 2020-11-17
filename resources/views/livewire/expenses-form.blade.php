@@ -2,8 +2,8 @@
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            @if($expense)
-                Expense: {{ $description }}
+            @if($expense->exists)
+                Expense: <span>{{$description}}</span>
             @else
                 New expense
             @endif
@@ -126,8 +126,15 @@
                                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                     </svg>
 
-                                    Add expense
+                                    @if($expense->exists)
+                                        Edit expense
+                                    @else
+                                        Add expense
+                                    @endif
                                 </button>
+
+                                <a href="{!! url('expenses') !!}" class="cursor-pointer bg-teal-400 hover:bg-teal-600 px-5 py-2 mx-2
+                                        inline-block text-white rounded disabled:opacity-50"> Back </a>
                             </div>
 
 

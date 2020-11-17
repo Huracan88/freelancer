@@ -52,8 +52,8 @@ Route::prefix('project')
     ->group(function(){
 
         Route::get('/',[ProjectController::class, 'index'])->name('projects');
-        Route::get('form',[ProjectController::class, 'form']);
-        Route::get('insert',[ProjectController::class, 'insert']);
+        Route::get('new',[ProjectController::class, 'new']);
+        Route::get('edit/{project}',[ProjectController::class, 'edit']);
 
     });
 
@@ -76,8 +76,8 @@ Route::prefix('expenses')
     ->group(function(){
 
         Route::get('/',[ExpenseController::class, 'index'])->name('expenses');
-        Route::get('/new-record',[ExpenseController::class, 'newRecordForm']);
-        Route::get('/edit-record/{expense}',[ExpenseController::class, 'editRecordForm']);
+        Route::get('/new-record',[ExpenseController::class, 'new']);
+        Route::get('/edit-record/{expense}',[ExpenseController::class, 'edit']);
         Route::get('/delete/{expense}',[ExpenseController::class, 'doDelete']);
     });
 

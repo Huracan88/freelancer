@@ -16,7 +16,17 @@ class ProjectController extends Controller
         return view('project.index')->with($view_data);
     }
 
-    public function form(Project $project = null){
+    public function new(){
+
+        $view_data = [
+            'project' => new Project(),
+            'clients' => Client::all()->pluck('name', 'id')->toArray()
+        ];
+
+        return view('project.form')->with($view_data);
+    }
+
+    public function edit(Project $project){
 
         $view_data = [
             'project' => $project,

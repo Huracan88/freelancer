@@ -17,7 +17,7 @@ class ClientController extends Controller
 
 
     public function new(){
-        return view('client.form',['client'=>null]);
+        return view('client.form',['client'=>new Client()]);
     }
 
     public function edit(Client $client){

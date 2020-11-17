@@ -34,7 +34,6 @@ class ReceivableController extends Controller
 
     }
 
-
     public function newRecordForm(Client $client = null){
 
 
@@ -62,7 +61,6 @@ class ReceivableController extends Controller
         return view('receivable.form')->with($view_data);
 
     }
-
 
     public function doInsert(Request $request){
 

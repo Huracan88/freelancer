@@ -19,7 +19,7 @@ class ExpenseController extends Controller
     }
 
 
-    public function newRecordForm(){
+    public function new(){
 
         $view_data = [
             'expense' => null,
@@ -29,8 +29,13 @@ class ExpenseController extends Controller
         return view('expenses.form')->with($view_data);
     }
 
-    public function editRecordForm(Expense $expense){
+    public function edit(Expense $expense){
+        $view_data = [
+            'expense' => $expense,
+            'clients' => Client::all()->pluck('name', 'id')->toArray()
+        ];
 
+        return view('expenses.form')->with($view_data);
     }
 
     public function doInsert(){

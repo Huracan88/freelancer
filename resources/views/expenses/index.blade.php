@@ -12,7 +12,7 @@
 
                 <x-button.basic text="Add expense"
                                 icon="plus-circle"
-                                :url="action([\App\Http\Controllers\ExpenseController::class,'newRecordForm'])"  />
+                                :url="action([\App\Http\Controllers\ExpenseController::class,'new'])"  />
             </div>
 
 
@@ -44,7 +44,7 @@
                                             <td class="text-left py-3 px-4">{{$expense->description}}</td>
                                             <td class="w-1/3 text-left py-3 px-4">$ {{ number_format($expense->amount,2) }}</td>
                                             <td>
-                                                <x-button.basic :url="action('ExpenseController@editRecordForm',$expense->id)" icon="pencil" text="Edit" />
+                                                <x-button.basic :url="action('ExpenseController@edit',$expense->id)" icon="pencil" text="Edit" />
                                             </td>
                                         </tr>
                                         @endforeach
