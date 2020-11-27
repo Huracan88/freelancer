@@ -75,7 +75,6 @@ Route::prefix('account')
 Route::prefix('expenses')
     ->middleware(['auth:sanctum', 'verified'])
     ->group(function(){
-
         Route::get('/',[ExpenseController::class, 'index'])->name('expenses');
         Route::get('/new-record',[ExpenseController::class, 'new']);
         Route::get('/edit-record/{expense}',[ExpenseController::class, 'edit']);
